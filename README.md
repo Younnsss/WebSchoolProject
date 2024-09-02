@@ -55,9 +55,10 @@ L'installation suivante fonctionne sous Ubuntu. En fonction de votre OS, il est 
    
 2. Créer un environnement virtuel Python avec Pyenv (non nécessaire si vous avez déjà un gestionnaires d'environnements virtuels pour Python)
 ```
-sudo apt install pyenv
-sudo apt install python
-sudo apt install pip
+sudo apt update -y
+sudo apt install python pip
+sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+curl https://pyenv.run | bash
 ```
 Si vous utilisez Bash comme exécuteur de commande dans votre Shell :
 ```
