@@ -103,7 +103,10 @@ Allez sur https://hub.docker.com et créez vous un compte.
 
 8. Installer kubectl
 ```
-sudo apt install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
 ```
+Si la dernière commande vous affiche la version de kubectl, c'est qu'il est correctement installé.
 
 Et c'est parti !
