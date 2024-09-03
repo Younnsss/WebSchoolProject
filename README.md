@@ -91,7 +91,7 @@ python manage.py startapp api
 
 6. Installer Docker
 ```
-sudo apt install docker
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 docker -v
 ```
 Si la dernière commande vous affiche la version de Docker, c'est qu'il est correctement installé.
