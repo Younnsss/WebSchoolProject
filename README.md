@@ -45,7 +45,7 @@ Lorsque vous envoyez un mail, pensez bien à mettre "CSC 8567" au début de l'ob
 - *Vous pouvez ajouter des applications, ajouter de la forme (Styles CSS, Bootstrap, Bulma) et des pages supplémentaires si vous le souhaitez.*
 - Les consignes pour le rendu final avec Kubernetes vous seront communiquées après le rendu du CC Django + Docker.
 
-## Modalité de rendu pour le CC Django + Docker
+## Modalités de rendu pour le CC Django + Docker
 
 Vous devez rendre tout le contenu de votre dépôt Github sous forme d'archive .zip ou .tar.gz, que vous avez créé à partir de ce modèle CSC8567-Projets.
 
