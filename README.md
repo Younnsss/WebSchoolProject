@@ -45,6 +45,32 @@ Lorsque vous envoyez un mail, pensez bien à mettre "CSC 8567" au début de l'ob
 - *Vous pouvez ajouter des applications, ajouter de la forme (Styles CSS, Bootstrap, Bulma) et des pages supplémentaires si vous le souhaitez.*
 - Les consignes pour le rendu final avec Kubernetes vous seront communiquées après le rendu du CC Django + Docker.
 
+## Modalité de rendu pour le CC Django + Docker
+
+Vous devez rendre tout le contenu de votre dépôt Github sous forme d'archive .zip ou .tar.gz, que vous avez créé à partir de ce modèle CSC8567-Projets.
+
+Ce rendu est individuel.
+
+Il contient donc :
+
+ - Le projet Django fonctionnel, avec le code des deux applications (public et api).
+
+ - Les fichiers Dockerfile.public et Dockerfile.api
+
+ - Le fichier docker-compose.yml
+
+ - Le fichier nginx.conf (configuration du proxy)
+
+Il faut, dans la même archive zip, ajouter :
+
+ - Un schéma de votre base de données
+ - Un schéma de votre infrastructure réseau (réseau(x) virtuel(s) Docker + lien à votre PC)
+
+**Votre architecture finale doit être telle que la commande "docker-compose up --build" démarre toute votre application et toutes les connexions demandées** (se référer au schéma sur le modèle Github). Ainsi, votre site doit être accessible depuis 127.0.0.1 directement dans un navigateur après l'exécution de la commande "docker-compose up --build".
+
+N'hésitez pas à ajouter à votre rendu des commentaires, qui nous aideront à mieux évaluer vos projets (et à les valoriser !).
+
+Bon courage !
 
 ## Installation
 
