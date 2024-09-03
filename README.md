@@ -55,7 +55,7 @@ Il contient donc :
 
  - Le projet Django fonctionnel, avec le code des deux applications (public et api).
 
- - Les fichiers Dockerfile.public et Dockerfile.api
+ - Les fichiers Dockerfile.front (qui crée l'image de l'application "public") et Dockerfile.api (qui crée l'image de l'applicattion "api")
 
  - Le fichier docker-compose.yml
 
