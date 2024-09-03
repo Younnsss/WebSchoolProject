@@ -65,6 +65,7 @@ Il faut, dans la même archive zip, ajouter :
 
  - Un schéma de votre base de données
  - Un schéma de votre infrastructure réseau (réseau(x) virtuel(s) Docker + lien à votre PC)
+ - Un fichier récapitulant la liste des chemins URL de votre site (/public, /api, ...)
 
 Ces deux schémas sont similaires à ceux affichés dans les consignes ci-dessus.
 
