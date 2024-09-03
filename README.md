@@ -66,6 +66,8 @@ Il faut, dans la même archive zip, ajouter :
  - Un schéma de votre base de données
  - Un schéma de votre infrastructure réseau (réseau(x) virtuel(s) Docker + lien à votre PC)
 
+Ces deux schémas sont similaires à ceux affichés dans les consignes ci-dessus.
+
 **Votre architecture finale doit être telle que la commande "docker-compose up --build" démarre toute votre application et toutes les connexions demandées** (se référer au schéma sur le modèle Github). Ainsi, votre site doit être accessible depuis 127.0.0.1 directement dans un navigateur après l'exécution de la commande "docker-compose up --build".
 
 N'hésitez pas à ajouter à votre rendu des commentaires, qui nous aideront à mieux évaluer vos projets (et à les valoriser !).
