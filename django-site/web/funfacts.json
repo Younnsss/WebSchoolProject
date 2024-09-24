@@ -1,0 +1,102 @@
+[
+    {
+        "model": "funfacts.funfact",
+        "pk": 1,
+        "fields": {
+            "title": "Bananas are berries, but strawberries aren't!",
+            "content": "According to botanical definitions, bananas are classified as berries, while strawberries are not because their seeds are on the outside.",
+            "author": 1,
+            "created_at": "2023-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 2,
+        "fields": {
+            "title": "A day on Venus is longer than a year!",
+            "content": "Venus takes about 243 Earth days to complete one rotation on its axis, but only 225 days to orbit the Sun.",
+            "author": 2,
+            "created_at": "2023-01-02T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 3,
+        "fields": {
+            "title": "Octopuses have three hearts!",
+            "content": "Two hearts pump blood to the gills, while the third pumps it to the rest of the body. They even change color when they're happy or stressed!",
+            "author": 3,
+            "created_at": "2023-01-03T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 4,
+        "fields": {
+            "title": "Sharks existed before trees!",
+            "content": "Sharks have been around for about 400 million years, while trees appeared around 350 million years ago.",
+            "author": 4,
+            "created_at": "2023-01-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 5,
+        "fields": {
+            "title": "Bees can recognize human faces!",
+            "content": "Despite their small brains, bees can identify and remember individual human faces using a technique similar to the way humans do.",
+            "author": 5,
+            "created_at": "2023-01-05T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 6,
+        "fields": {
+            "title": "The Eiffel Tower can grow taller in the summer!",
+            "content": "Due to thermal expansion, the metal expands when it's hot, making the Eiffel Tower about 15 cm (6 inches) taller during the summer.",
+            "author": 1,
+            "created_at": "2023-01-06T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 7,
+        "fields": {
+            "title": "Wombat poop is cube-shaped!",
+            "content": "Wombats are the only animals known to produce cube-shaped poop, which helps prevent it from rolling away and helps them mark territory.",
+            "author": 2,
+            "created_at": "2023-01-07T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 8,
+        "fields": {
+            "title": "A group of flamingos is called a flamboyance!",
+            "content": "Fittingly, the bright and colorful flamingos have a fancy name for their gatherings.",
+            "author": 3,
+            "created_at": "2023-01-08T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 9,
+        "fields": {
+            "title": "Honey never spoils!",
+            "content": "Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.",
+            "author": 4,
+            "created_at": "2023-01-09T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.funfact",
+        "pk": 10,
+        "fields": {
+            "title": "There’s a species of jellyfish that can live forever!",
+            "content": "The Turritopsis dohrnii jellyfish can revert its cells to their earliest form and start its life cycle over again, potentially making it biologically immortal.",
+            "author": 5,
+            "created_at": "2023-01-10T00:00:00Z"
+        }
+    }
+]

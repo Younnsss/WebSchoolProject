@@ -1,7 +1,60 @@
-<h1>Create a New Fun Fact</h1>
-<form method="post">
-    {% csrf_token %}
-    <p>Title: <input type="text" name="title" required></p>
-    <p>Content: <textarea name="content" required></textarea></p>
-    <button type="submit">Submit</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Fun Fact</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fun Facts</h1>
+    <p>Enjoy lots of fun and interesting fun facts</p>
+    <h2>Create a New Fun Fact</h2>
+    <form method="post">
+        {% csrf_token %}
+        <p>Title: <input type="text" name="title" required></p>
+        <p>Content: <textarea name="content" required></textarea></p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

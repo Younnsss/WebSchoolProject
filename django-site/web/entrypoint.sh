@@ -3,6 +3,13 @@
 # Exécute les migrations
 python manage.py migrate
 
+python manage.py loaddata users.json
+python manage.py loaddata funfacts.json
+
+export DJANGO_SUPERUSER_USERNAME=root
+export DJANGO_SUPERUSER_PASSWORD=pass
+export DJANGO_SUPERUSER_EMAIL=myemail@example.com
+
 python manage.py createsuperuser  --noinput
 
 # Démarre le serveur

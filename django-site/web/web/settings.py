@@ -27,8 +27,19 @@ SECRET_KEY = 'django-insecure-02in(-)6jd(%98&ki2op7+y)h1v#zm&$+=#(2=4%2ctbr#3q0y
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "btvl98995211259.admin.prd.bie.nbyt.fr",  #à supprimer
-    "localhost"
+    "frontend",
+    "backend",
+    "localhost",
+    "api",
+    "public"
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://frontend",
+    "http://backend",
+    "http://localhost",
+    "http://api",
+    "http://public" 
 ]
 
 

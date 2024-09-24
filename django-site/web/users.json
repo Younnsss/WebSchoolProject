@@ -1,0 +1,47 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "WaffleWarrior",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "user1@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "username": "GiggleSprout",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "user2@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "PixelPenguin",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "user3@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "username": "TofuTornado",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "user4@example.com"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "username": "ZestyZebra",
+            "password": "pbkdf2_sha256$260000$...",
+            "email": "user5@example.com"
+        }
+    }
+]
