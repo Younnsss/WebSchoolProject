@@ -1,0 +1,23 @@
+<!-- funfacts/templates/funfacts/funfacts_list.html -->
+
+<h1>Fun Facts</h1>
+<ul>
+    {% for funfact in funfacts %}
+        <li>
+            <h2>{{ funfact.title }}</h2>
+            <p>{{ funfact.content }}</p>
+            <p>Posted by {{ funfact.author }} on {{ funfact.created_at }}</p>
+            <p>Votes: {{ funfact.total_votes }}</p>
+            {% if user.is_authenticated %}
+                <a href="{% url 'vote_funfact' funfact.id 1.0 %}">Upvote</a> |
+                <a href="{% url 'vote_funfact' funfact.id -1.0 %}">Downvote</a>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+
+{% if user.is_authenticated %}
+    <a href="{% url 'create_funfact' %}">Create a new fun fact</a>
+{% else %}
+    <p><a href="/admin/login/">Login to create and vote on fun facts</a></p>
+{% endif %}

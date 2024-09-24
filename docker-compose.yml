@@ -1,1 +1,19 @@
-# Créez ici votre docker compose
+version: '3'
+
+services:
+  public:
+    build:
+      context: .
+      dockerfile: django-site/Dockerfile.front
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+
+  api:
+    build:
+      context: .
+      dockerfile: django-site/Dockerfile.api
+    command: python manage.py runserver 0.0.0.0:8001
+    ports:
+      - "8001:8001"
+
