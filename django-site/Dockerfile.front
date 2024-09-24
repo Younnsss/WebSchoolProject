@@ -1,11 +1,13 @@
-FROM python:latest
+FROM registry.glouton.int.nbyt.fr/commun/devops/ci/python3.12:latest
 
 WORKDIR /app
 
 COPY django-site/web /app
 
+RUN chmod +x /app/entrypoint.sh
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 8000
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD [ "python", "manage.py", "runserver", "0.0.0.0:8000"]
