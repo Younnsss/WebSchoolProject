@@ -48,10 +48,11 @@
                 <h2>{{ video_game.title }}</h2>
                 <p>{{ video_game.description }}</p>
                 <p>Posted by {{ video_game.author }} on {{ video_game.created_at }}</p>
+                <p>Votes: {{ video_game.total_votes }}</p>
                 {% if user.is_authenticated %}
                     <div class="vote-buttons">
-                        <a href="{% url 'vote_video_game' video_game.id 1 %}">&#x1F44D;</a> <!-- Thumbs up symbol -->
-                        <a href="{% url 'vote_video_game' video_game.id -1 %}">&#x1F44E;</a> <!-- Thumbs down symbol -->
+                        <a href="{% url 'vote_video_game' video_game.id 1.0 %}">&#x1F44D;</a> 
+                        <a href="{% url 'vote_video_game' video_game.id -1.0 %}">&#x1F44E;</a>
                     </div>
                 {% endif %}
             </li>
