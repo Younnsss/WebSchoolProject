@@ -4,7 +4,7 @@
 python manage.py migrate
 
 python manage.py loaddata users.json
-python manage.py loaddata funfacts.json
+python manage.py loaddata videogames.json
 
 export DJANGO_SUPERUSER_USERNAME=root
 export DJANGO_SUPERUSER_PASSWORD=pass

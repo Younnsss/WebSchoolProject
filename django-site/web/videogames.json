@@ -1,0 +1,102 @@
+[
+    {
+        "model": "funfacts.videogame",
+        "pk": 1,
+        "fields": {
+            "title": "The Legend of Zelda: Breath of the Wild",
+            "description": "An open-world action-adventure game where players explore the kingdom of Hyrule.",
+            "author": 1,
+            "created_at": "2023-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 2,
+        "fields": {
+            "title": "Super Mario Odyssey",
+            "description": "A platform game where Mario travels across various worlds to rescue Princess Peach from Bowser.",
+            "author": 2,
+            "created_at": "2023-01-02T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 3,
+        "fields": {
+            "title": "Minecraft",
+            "description": "A sandbox game where players can build and explore their own worlds made of blocks.",
+            "author": 3,
+            "created_at": "2023-01-03T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 4,
+        "fields": {
+            "title": "The Witcher 3: Wild Hunt",
+            "description": "An action RPG where players control Geralt of Rivia, a monster hunter searching for his adopted daughter.",
+            "author": 4,
+            "created_at": "2023-01-04T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 5,
+        "fields": {
+            "title": "Red Dead Redemption 2",
+            "description": "An action-adventure game set in the Wild West, following the story of Arthur Morgan.",
+            "author": 5,
+            "created_at": "2023-01-05T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 6,
+        "fields": {
+            "title": "Fortnite",
+            "description": "A battle royale game where players fight to be the last one standing.",
+            "author": 1,
+            "created_at": "2023-01-06T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 7,
+        "fields": {
+            "title": "Overwatch",
+            "description": "A team-based multiplayer first-person shooter where players choose from a roster of heroes.",
+            "author": 2,
+            "created_at": "2023-01-07T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 8,
+        "fields": {
+            "title": "God of War",
+            "description": "An action-adventure game following Kratos and his son Atreus on a journey through Norse mythology.",
+            "author": 3,
+            "created_at": "2023-01-08T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 9,
+        "fields": {
+            "title": "Cyberpunk 2077",
+            "description": "An open-world RPG set in a dystopian future where players control V, a mercenary.",
+            "author": 4,
+            "created_at": "2023-01-09T00:00:00Z"
+        }
+    },
+    {
+        "model": "funfacts.videogame",
+        "pk": 10,
+        "fields": {
+            "title": "Animal Crossing: New Horizons",
+            "description": "A life simulation game where players develop a deserted island into a community of anthropomorphic animals.",
+            "author": 5,
+            "created_at": "2023-01-10T00:00:00Z"
+        }
+    }
+]

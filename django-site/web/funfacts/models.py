@@ -1,35 +1,16 @@
-# funfacts/models.py
+# models.py
 
-from django.contrib.auth.models import User
 from django.db import models
-from django.db.models import Sum
+from django.contrib.auth.models import User
 
-
-
-class FunFactQuerySet(models.QuerySet):
-    def annotate_with_total_votes(self):
-        return self.annotate(total_votes=Sum("votes__value"))
-
-
-class FunFact(models.Model):
-    objects = FunFactQuerySet.as_manager()
-
+class VideoGame(models.Model):
     title = models.CharField(max_length=255)
-    content = models.TextField()
+    description = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return self.title
-
 class Vote(models.Model):
-    VOTE_CHOICES = [
-        (1.0, 'Upvote'),
-        (-1.0, 'Downvote'),
-    ]
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    fun_fact = models.ForeignKey(FunFact, related_name='votes', on_delete=models.CASCADE)
-    value = models.FloatField(choices=VOTE_CHOICES)
-
-    class Meta:
-        unique_together = ('user', 'fun_fact')
+    video_game = models.ForeignKey(VideoGame, on_delete=models.CASCADE)
+    value = models.IntegerField()  # 1 for upvote, -1 for downvote
+    created_at = models.DateTimeField(auto_now_add=True)

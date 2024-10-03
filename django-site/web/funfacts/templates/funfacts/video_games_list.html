@@ -1,11 +1,9 @@
-<!-- funfacts/templates/funfacts/funfacts_list.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Facts</title>
+    <title>Video Games</title>
     <style>
         body {
             background-color: black;
@@ -17,17 +15,14 @@
             font-size: 3em;
             margin-top: 20px;
         }
-        h2 {
-            font-size: 2em;
-        }
         p {
             font-size: 1.2em;
         }
-        .funfact-list {
+        .video-game-list {
             list-style-type: none;
             padding: 0;
         }
-        .funfact-item {
+        .video-game-item {
             margin: 20px 0;
             padding: 20px;
             border: 1px solid white;
@@ -45,28 +40,28 @@
     </style>
 </head>
 <body>
-    <h1>Fun Facts</h1>
-    <p>Enjoy lots of fun and interesting fun facts</p>
-    {% if user.is_authenticated %}
-    <a href="{% url 'create_funfact' %}">Create a new fun fact</a>
-{% else %}
-    <p><a href="/admin/login/">Login to create and vote on fun facts  [Pseudo : root / MDP : pass]</a></p>
-{% endif %}
-    <ul class="funfact-list">
-        {% for funfact in funfacts %}
-            <li class="funfact-item">
-                <h2>{{ funfact.title }}</h2>
-                <p>{{ funfact.content }}</p>
-                <p>Posted by {{ funfact.author }} on {{ funfact.created_at }}</p>
-                <p>Votes: {{ funfact.total_votes }}</p>
+    <h1>Video Games</h1>
+    <p>Enjoy lots of fun and interesting video games</p>
+    <ul class="video-game-list">
+        {% for video_game in video_games %}
+            <li class="video-game-item">
+                <h2>{{ video_game.title }}</h2>
+                <p>{{ video_game.description }}</p>
+                <p>Posted by {{ video_game.author }} on {{ video_game.created_at }}</p>
                 {% if user.is_authenticated %}
                     <div class="vote-buttons">
-                        <a href="{% url 'vote_funfact' funfact.id 1.0 %}">&#x1F44D;</a> <!-- Thumbs up symbol -->
-                        <a href="{% url 'vote_funfact' funfact.id -1.0 %}">&#x1F44E;</a> <!-- Thumbs down symbol -->
+                        <a href="{% url 'vote_video_game' video_game.id 1 %}">&#x1F44D;</a> <!-- Thumbs up symbol -->
+                        <a href="{% url 'vote_video_game' video_game.id -1 %}">&#x1F44E;</a> <!-- Thumbs down symbol -->
                     </div>
                 {% endif %}
             </li>
         {% endfor %}
     </ul>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'create_video_game' %}">Add a new video game</a>
+    {% else %}
+        <p><a href="/admin/login/">Login to add and vote on video games</a></p>
+    {% endif %}
 </body>
 </html>

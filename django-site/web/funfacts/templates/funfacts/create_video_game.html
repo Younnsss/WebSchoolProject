@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a New Fun Fact</title>
+    <title>Create a New Video Game</title>
     <style>
         body {
             background-color: black;
@@ -47,13 +47,13 @@
     </style>
 </head>
 <body>
-    <h1>Fun Facts</h1>
-    <p>Enjoy lots of fun and interesting fun facts</p>
-    <h2>Create a New Fun Fact</h2>
+    <h1>Video Games</h1>
+    <p>Enjoy lots of fun and interesting video games</p>
+    <h2>Add a New Video Game</h2>
     <form method="post">
         {% csrf_token %}
         <p>Title: <input type="text" name="title" required></p>
-        <p>Content: <textarea name="content" required></textarea></p>
+        <p>Description: <textarea name="description" required></textarea></p>
         <button type="submit">Submit</button>
     </form>
 </body>
