@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Games</title>
+    <style>
+        body {
+            background: url('/static/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Filtre noir semi-transparent */
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .video-game-list {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-height: 700px; /* Limite la hauteur */
+            overflow-y: auto; /* Ajoute un défilement si le contenu dépasse la hauteur */
+        
+        }
+        .video-game-item {
+            width: 700px;
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent pour les items */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .video-game-item .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 300px;
+        }
+        .vote-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .vote-buttons a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 10px;
+        }
+        .vote-buttons a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Top Video Games All Time</h1>
+        <p>A non-exhaustive list of top video games all time</p>
+        <ul class="video-game-list">
+            {% for video_game in video_games %}
+                <li class="video-game-item">
+                    <div class="row">
+                        <h2>{{ video_game.title }}</h2>
+                        <p>{{ video_game.description }}</p>
+                    </div>
+                    <div class="row">
+                        <p>Votes: {{ video_game.total_votes }}</p>
+                        {% if user.is_authenticated %}
+                            <div class="vote-buttons">
+                                <a href="{% url 'vote_video_game' video_game.id 1.0 %}">&#x1F44D;</a> 
+                                <a href="{% url 'vote_video_game' video_game.id -1.0 %}">&#x1F44E;</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'create_video_game' %}">Add a new video game</a>
+        {% else %}
+            <p><a href="/admin/login/">Login to add and vote on video games</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>y

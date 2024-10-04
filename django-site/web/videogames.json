@@ -1,6 +1,6 @@
 [
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 1,
         "fields": {
             "title": "The Legend of Zelda: Breath of the Wild",
@@ -10,7 +10,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 2,
         "fields": {
             "title": "Super Mario Odyssey",
@@ -20,7 +20,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 3,
         "fields": {
             "title": "Minecraft",
@@ -30,7 +30,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 4,
         "fields": {
             "title": "The Witcher 3: Wild Hunt",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 5,
         "fields": {
             "title": "Red Dead Redemption 2",
@@ -50,7 +50,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 6,
         "fields": {
             "title": "Fortnite",
@@ -60,7 +60,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 7,
         "fields": {
             "title": "Overwatch",
@@ -70,7 +70,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 8,
         "fields": {
             "title": "God of War",
@@ -80,7 +80,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 9,
         "fields": {
             "title": "Cyberpunk 2077",
@@ -90,7 +90,7 @@
         }
     },
     {
-        "model": "funfacts.videogame",
+        "model": "front.videogame",
         "pk": 10,
         "fields": {
             "title": "Animal Crossing: New Horizons",
