@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: back
+  name: back
+  namespace: u-tbmdn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: back
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: back
+    spec:
+      containers:
+      - image: younsssdocker/schoolproject:v3
+        name: schoolproject
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DB_NAME
+          value: {{ .Values.database.name }}
+        - name: DB_USER
+          value: {{ .Values.database.user }}
+        - name: DB_PASSWORD
+          value: {{ .Values.database.password }}
+        - name: DB_HOST
+          value: db-0
+        - name: DB_PORT
+          value: "3000"
+        resources: {}
+status: {}

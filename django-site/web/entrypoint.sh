@@ -13,4 +13,5 @@ export DJANGO_SUPERUSER_EMAIL=myemail@example.com
 python manage.py createsuperuser  --noinput
 
 # Démarre le serveur
-python manage.py runserver 0.0.0.0:8001
+python manage.py runserver 0.0.0.0:8000
+# python manage.py runserver 0.0.0.0:8001

@@ -1,0 +1,84 @@
+# ---
+# apiVersion: apps/v1
+# kind: StatefulSet
+# metadata:
+#   name: db
+# spec:
+#   selector:
+#     matchLabels:
+#       app: db
+#   serviceName: {{ .Values.database.host }}
+#   replicas: 1
+#   minReadySeconds: 10
+#   template:
+#     metadata:
+#       labels:
+#         app: db
+#     spec:
+#       terminationGracePeriodSeconds: 10
+#       containers:
+#       - image: postgres
+#         name: postgresql
+#         ports:
+#         - containerPort: 5432
+#         env:
+#         - name: POSTGRES_USER
+#           value: {{ .Values.database.user }}
+#         - name: POSTGRES_DB
+#           value: {{ .Values.database.name }}
+#         - name: POSTGRES_PASSWORD
+#           value: {{ .Values.database.password }}
+#         resources: {}
+#         volumeMounts:
+#         - name: www
+#           mountPath: /bitnami/postgresql/data
+#         securityContext:
+#           runAsUser: 1001
+#           runAsGroup: 1001
+#           fsGroup: 1001
+#   volumeClaimTemplates:
+#   - metadata:
+#       name: www
+#     spec:
+#       accessModes: [ "ReadWriteMany" ]
+#       storageClassName: "longhorn"
+#       resources:
+#         requests:
+#           storage: 1Gi
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: db
+  name: db
+  namespace: u-tbmdn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: db
+    spec:
+      containers:
+      - image: postgres
+        name: postgresql
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_USER
+          value: {{ .Values.database.user }}
+        - name: POSTGRES_DB
+          value: {{ .Values.database.name }}
+        - name: POSTGRES_PASSWORD
+          value: {{ .Values.database.password }}
+        - name: PGDATA
+          value: "/var/lib/postgresql/data/home"
+        resources: {}
+status: {}

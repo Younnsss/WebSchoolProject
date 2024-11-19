@@ -1,0 +1,6 @@
+database:
+  name: "postgres"
+  user: "postgres"
+  password: "mypassword"
+  host: "db-service"
+  port: "3000"

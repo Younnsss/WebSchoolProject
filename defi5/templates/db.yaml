@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: db
+  name: db
+  namespace: u-tbmdn
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: db
+    spec:
+      containers:
+      - image: bitnami/postgresql
+        name: postgresql
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRESQL_PASSWORD
+          value: "mypassword"
+        resources: {}
+status: {}

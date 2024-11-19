@@ -31,7 +31,10 @@ ALLOWED_HOSTS = [
     "backend",
     "localhost",
     "api",
-    "public"
+    "public",
+    "tsp-1b.admin.prd.bie.nbyt.fr",
+    "157.159.11.201",
+    "django.ubuntu.csc8567.luxbulb.org"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -95,15 +98,17 @@ WSGI_APPLICATION = 'web.wsgi.application'
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 # }
+import os 
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "mydb",
-        'USER': "myuser",
-        'PASSWORD': "mypassword",
-        'HOST': "db",
-        'PORT': '5432',
+        'NAME': os.getenv('DB_NAME', 'defautdb'),
+        'USER': os.getenv('DB_USER', 'defaultuser'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'defaultpassword'),
+        'HOST': os.getenv('DB_HOST', 'defaultserver'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
 
