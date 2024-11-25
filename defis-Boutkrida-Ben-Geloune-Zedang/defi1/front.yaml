@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
   creationTimestamp: null
   labels:
@@ -7,17 +7,6 @@ metadata:
   name: front
   namespace: u-tbmdn
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: front
-  strategy: {}
-  template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        app: front
-    spec:
       containers:
       - image: younsssdocker/schoolproject:v3
         name: schoolproject
@@ -31,7 +20,7 @@ spec:
         - name: DB_PASSWORD
           value: {{ .Values.database.password }}
         - name: DB_HOST
-          value: db-0
+          value: {{ .Values.database.host }}
         - name: DB_PORT
           value: "3000"
         resources: {}

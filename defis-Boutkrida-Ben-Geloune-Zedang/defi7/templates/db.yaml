@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: db
-  serviceName: {{ .Values.database.host }}
+  serviceName: quarkus
   replicas: 1
   minReadySeconds: 10
   template:

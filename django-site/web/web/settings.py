@@ -42,7 +42,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://backend",
     "http://localhost",
     "http://api",
-    "http://public" 
+    "http://public",
+    "https://django.ubuntu.csc8567.luxbulb.org"
 ]
 
 
